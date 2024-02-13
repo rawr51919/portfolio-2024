@@ -1,40 +1,24 @@
-<h1 align="center"> Astro Starter Kit</h1>
+# Astro Starter Kit
 
-<br />
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/zankhq/astro-starter)
+[![Open in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/zankhq/astro-starter)
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/zankhq/astro-starter?devcontainer_path=.devcontainer/blog/devcontainer.json)
 
+## Features
 
-<p align="center">
-<a href="https://stackblitz.com/github/zankhq/astro-starter">
-	<img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" />
-</a>
-&nbsp;&nbsp;
-<a href="https://codesandbox.io/p/sandbox/github/zankhq/astro-starter">
-	<img src="https://assets.codesandbox.io/github/button-edit-lime.svg" />
-</a>
-&nbsp;&nbsp;
-<a href="https://codespaces.new/zankhq/astro-starter?devcontainer_path=.devcontainer/blog/devcontainer.json">
-	<img src="https://github.com/codespaces/badge.svg" />
-</a>
-</p>
+- ✅ Tailwind CSS
+- ✅ Alpine js
+- ✅ Typescript
+- ✅ Localization (with astro-i18n-aut)
+- ✅ Dark/light mode
+- ✅ Blog
+- ✅ Discussions (thanks to giscus)
+- ✅ CMS for editing blog post (thanks to Sveltia CMS)
+- ✅ Sitemap (localized)
+- ✅ RSS (localized)
+- ✅ PWA
 
-<br />
-
-
-### Features:
-
--   ✅ Tailwind CSS
--   ✅ Alpine js
--   ✅ Typescript
--   ✅ Localization (with astro-i18n-aut)
--   ✅ Dark/light mode
--   ✅ Blog
--   ✅ Discussions (thanks to giscus)
--   ✅ CMS for editing blog post (thanks to Sveltia CMS)
--   ✅ Sitemap (localized)
--   ✅ RSS (localized)
--   ✅ PWA
-
-### 🧞 Commands
+## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -49,11 +33,11 @@ All commands are run from the root of the project, from a terminal:
 
 If you want to switch to npm make sure to remove pnpm-lock.yaml and node_modules folder and then run `npm install`
 
-### 🚀 Project Structure
+## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
-```
+```bash
 ├── public/
 ├── src/
 │   ├── components/
@@ -81,18 +65,18 @@ The `src/content/` directory contains "collections" of related Markdown and MDX 
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-### ✍️ Admin dashboard
+## ✍️ Admin dashboard
 
-You can access the admin dashboard for editing blog post at `/admin` (https://example.com/admin)
+You can access the admin dashboard for editing blog post at `/admin` (<https://example.com/admin>)
 
-Sveltia cms uses the same configuration as Decap cms, so you can follow the documentation at https://decapcms.org/docs.
+Sveltia cms uses the same configuration as Decap cms, so you can follow the documentation at <https://decapcms.org/docs>.
 
 In order to access the admin dashboard to change blog articles content you need to have access to the github repo, a quick way to test it test would be fork the repo and than configure sveltia cms accordingly to your cloud provider (netlify, cloudflare, vercel, etc...).
 
-If you use cloudflare pages you can follow this guide https://github.com/i40west/netlify-cms-cloudflare-pages.
+If you use cloudflare pages you can follow this guide <https://github.com/i40west/netlify-cms-cloudflare-pages>.
 
-If you use netlify it's actually easier, you will need to change in the file `astro.config.mjs` NetlifyCMS config `config.backend.name` to git-gateway. (See https://decapcms.org/docs/git-gateway-backend/#git-gateway-with-netlify for more info)
+If you use netlify it's actually easier, you will need to change in the file `astro.config.mjs` NetlifyCMS config `config.backend.name` to git-gateway. (See <https://decapcms.org/docs/git-gateway-backend/#git-gateway-with-netlify> for more info)
 
-### 👀 Want to learn more?
+## 👀 Want to learn more?
 
 Check out [Astro documentation](https://docs.astro.build) or jump into Astro [Discord server](https://astro.build/chat).

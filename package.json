@@ -1,16 +1,16 @@
 {
-	"name": "create-astro-starter",
+	"name": "portfolio-2024",
 	"type": "module",
-	"version": "0.13.4",
-	"author": "Giulio Zanchetta",
-	"description": "Astro starter template with tailwind, alpinejs, localization, blog, CMS, and comments",
+	"version": "1.0.0",
+	"author": "rawr51919",
+	"description": "My portfolio website, made in Astro and linking to my webpages and projects currently live on Vercel. Created using the Astro Starter Kit.",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/zankhq/astro-starter.git"
+		"url": "https://github.com/rawr51919/portfolio-2024.git"
 	},
-	"bugs": "https://github.com/zankhq/astro-starter/issues",
-	"homepage": "https://github.com/zankhq/astro-starter",
+	"bugs": "https://github.com/rawr51919/portfolio-2024/issues",
+	"homepage": "https://github.com/rawr51919/portfolio-2024",
 	"files": [
 		"*"
 	],
@@ -23,27 +23,31 @@
 		"pwa:generate-assets": "pwa-assets-generator --preset minimal public/logo.svg"
 	},
 	"dependencies": {
-		"@astrojs/alpinejs": "^0.3.1",
-		"@astrojs/mdx": "^2.0.0",
-		"@astrojs/rss": "^4.0.1",
-		"@astrojs/sitemap": "^3.0.3",
-		"@astrojs/tailwind": "^5.0.3",
+		"@astrojs/alpinejs": "^0.4.0",
+		"@astrojs/mdx": "^2.1.1",
+		"@astrojs/node": "^8.2.0",
+		"@astrojs/rss": "^4.0.5",
+		"@astrojs/sitemap": "^3.0.5",
+		"@astrojs/tailwind": "^5.1.0",
 		"@fontsource-variable/inter": "^5.0.16",
-		"@types/alpinejs": "^3.13.5",
-		"alpinejs": "^3.13.3",
-		"astro": "^4.0.3",
-		"astro-i18n-aut": "^0.5.0",
-		"sharp": "^0.33.0",
-		"tailwindcss": "^3.3.6",
+		"@types/alpinejs": "^3.13.6",
+		"@types/mdx": "^2.0.11",
+		"alpinejs": "^3.13.5",
+		"astro": "^4.3.6",
+		"astro-i18n-aut": "^0.7.0",
+		"mdx": "^0.2.3",
+		"rehype": "^13.0.1",
+		"sharp": "^0.33.2",
+		"tailwindcss": "^3.4.1",
 		"workbox-window": "^7.0.0"
 	},
 	"devDependencies": {
-		"@vite-pwa/assets-generator": "^0.0.11",
-		"astro-icon": "^0.8.2",
+		"@vite-pwa/assets-generator": "^0.2.4",
+		"astro-icon": "^1.1.0",
 		"astro-seo": "^0.8.0",
-		"prettier": "^3.1.0",
-		"prettier-plugin-astro": "^0.12.2",
-		"prettier-plugin-tailwindcss": "^0.5.9"
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.13.0",
+		"prettier-plugin-tailwindcss": "^0.5.11"
 	},
 	"prettier": {
 		"tabWidth": 4,
