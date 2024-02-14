@@ -10,26 +10,22 @@ import "@fontsource-variable/inter";
 import { SEO } from "astro-seo";
 import { SITE_TITLE, SITE_DESCRIPTION, TWITTER_CREATOR } from "@src/consts";
 import { getLocale } from "astro-i18n-aut";
-
+// title, description, and image interface
 interface Props {
 	title: string;
 	description: string;
 	image?: string;
 }
-
 const locale = getLocale(Astro.url);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const resolvedImageWithDomain = new URL("/meta/opengraph.png", Astro.site).toString();
-
 const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/blog-placeholder-1.jpg" } = Astro.props;
 ---
-
 <!-- Global Metadata -->
 <meta charset="utf-8" />
-
 <!-- Primary Meta Tags -->
 <title>{title}</title>
-
+<!-- SEO data, this webpage utilizes this with Google search results -->
 <SEO
 	title={title}
 	description={description}

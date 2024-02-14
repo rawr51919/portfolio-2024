@@ -7,10 +7,8 @@ import type { CollectionEntry } from "astro:content";
 import { getLocale, getLocaleUrlPrefix } from "astro-i18n-aut";
 import Container from "@src/components/Container.astro";
 import HeroImage from "@src/components/blog/HeroImage.astro";
-
 const locale = getLocale(Astro.url) ?? DEFAULT_LOCALE;
 const localeUrlPrefix = getLocaleUrlPrefix(Astro.url);
-
 const posts = (await getCollection("blog", (entry) => entry.slug.startsWith(`${locale}/`)))
 	.sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
 	.map<CollectionEntry<"blog"> & { href: string }>((post) => {
@@ -20,7 +18,6 @@ const posts = (await getCollection("blog", (entry) => entry.slug.startsWith(`${l
 		};
 	});
 ---
-
 <Layout title="Blog">
 	<Container class="pt-16">
 		<ul class="m-0 grid list-none grid-cols-2 gap-6 p-0">

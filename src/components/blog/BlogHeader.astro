@@ -1,6 +1,5 @@
 ---
 import FormattedDate from "@components/FormattedDate.astro";
-
 type Props = {
 	isSubheading?: boolean;
 	pubDate: Date;
@@ -8,10 +7,8 @@ type Props = {
 	name?: string;
 	[key: string]: any;
 };
-
 const { isSubheading = false, pubDate, updatedDate, name, ...props } = Astro.props;
 ---
-
 <div transition:name={name} transition:animate="initial">
 	{
 		isSubheading ? (

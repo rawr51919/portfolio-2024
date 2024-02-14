@@ -4,10 +4,8 @@ import LanguageSelector from "@components/LanguageSelector.astro";
 import { localizePath } from "@utils/t.ts";
 import ThemeSelector from "@components/ThemeSelector.astro";
 import { SITE_TITLE, PAGES } from "@src/consts";
-
 const url = Astro.url;
 ---
-
 <header
 	x-data={`{
 				open: window.innerWidth < 768 ? false : true,
