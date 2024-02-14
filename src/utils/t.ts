@@ -1,7 +1,6 @@
 /**
  * From https://github.com/trktml/lotusforafrica/blob/main/src/utils/translationTools.ts
  */
-
 import { getLocale } from "astro-i18n-aut";
 import { DEFAULT_LOCALE, LOCALES } from "@src/consts";
 import en from "@locales/en.json";
