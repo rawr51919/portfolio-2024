@@ -1,7 +1,5 @@
 local_backend: true
-
 logo_url: /logo.svg
-
 backend:
     name: github
     branch: main
@@ -10,17 +8,13 @@ backend:
     base_url: http://portfolio2024.vercel.app
     auth_endpoint: oauth
     automatic_deployments: true
-
 media_folder: "src/assets/images"
 public_folder: "@assets/images"
-
 i18n:
     structure: "multiple_folders"
     locales:
         - "en"
-        - "it"
     default_locale: "en"
-
 collections:
     - name: "posts"
       i18n: true

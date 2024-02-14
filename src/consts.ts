@@ -2,10 +2,8 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 // Website metadata
 export const SITE_URL: string = "https://portfolio2024.vercel.app/";
-export const SITE_TITLE: string = "Portfolio 2024";
+export const SITE_TITLE: string = "rawr51919's Portfolio";
 export const SITE_DESCRIPTION: string = "rawr51919's Portfolio Website";
-// SEO metadata
-export const TWITTER_CREATOR: string = "@xxx";
 // Navigation
 type Page = {
 	title: string;
@@ -18,10 +16,6 @@ export const PAGES: Page[] = [
 		href: "/",
 	},
 	{
-		title: "Blog",
-		href: "/blog",
-	},
-	{
 		title: "About",
 		href: "/about",
 	},
@@ -30,5 +24,4 @@ export const PAGES: Page[] = [
 export const DEFAULT_LOCALE = "en";
 export const LOCALES = {
 	en: "en", // the `defaultLocale` value must present in `locales` keys
-	it: "it",
 };

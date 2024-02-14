@@ -8,7 +8,6 @@ import { DEFAULT_LOCALE, LOCALES, SITE_URL } from "./src/consts";
 import node from "@astrojs/node";
 const defaultLocale = DEFAULT_LOCALE;
 const locales = LOCALES;
-
 // https://astro.build/config
 export default defineConfig({
   site: SITE_URL,

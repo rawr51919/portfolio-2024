@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import { getLocale, getLocaleUrlPrefix } from "astro-i18n-aut";
 const localeUrlPrefix = getLocaleUrlPrefix(Astro.url);
 ---
-<Layout title="404 | Astro starter">
+<Layout title="404 | rawr51919's Portfolio 2024">
 	<section class="flex h-full items-center p-16">
 		<div class="container mx-auto my-8 flex flex-col items-center justify-center px-5">
 			<div class="max-w-md text-center">
@@ -12,8 +12,8 @@ const localeUrlPrefix = getLocaleUrlPrefix(Astro.url);
 					<span class="text-primary">404</span>
 				</h2>
 				<p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
-				<p class="text-muted mb-8 mt-4 text-lg dark:text-slate-400">But dont worry, you can find plenty of other things on our homepage.</p>
-				<a rel="noopener noreferrer" href={localeUrlPrefix || "/"} class="btn ml-4">Back to homepage</a>
+				<p class="text-muted mb-8 mt-4 text-lg dark:text-slate-400">But don't worry, you can find plenty of other things on my homepage.</p>
+				<a rel="noopener noreferrer" href={localeUrlPrefix || "/"} class="btn ml-4 hover:text-underline">Back to homepage</a>
 			</div>
 		</div>
 	</section>

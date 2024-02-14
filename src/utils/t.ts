@@ -4,14 +4,12 @@
 
 import { getLocale } from "astro-i18n-aut";
 import { DEFAULT_LOCALE, LOCALES } from "@src/consts";
-import it from "@locales/it.json";
 import en from "@locales/en.json";
 const handler = {
 	get(target: any, prop: any, receiver: any) {
 		return target[prop].replaceAll("\n", "<br/>");
 	},
 };
-const it_proxy = new Proxy(it, handler);
 const en_proxy = new Proxy(en, handler);
 export const defaultLocale = DEFAULT_LOCALE;
 export const locales = LOCALES;
@@ -23,8 +21,7 @@ export const locales = LOCALES;
 export default function t(astroUrl: URL): Locales {
 	let locale = getLocale(astroUrl);
 	switch (locale) {
-		case "it":
-			return it_proxy as Locales;
+		case "english":
 		case "en":
 		default:
 			return en_proxy as Locales;

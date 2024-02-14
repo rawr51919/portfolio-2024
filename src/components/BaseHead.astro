@@ -8,7 +8,7 @@
 import "@styles/global.css";
 import "@fontsource-variable/inter";
 import { SEO } from "astro-seo";
-import { SITE_TITLE, SITE_DESCRIPTION, TWITTER_CREATOR } from "@src/consts";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@src/consts";
 import { getLocale } from "astro-i18n-aut";
 // title, description, and image interface
 interface Props {
@@ -46,15 +46,6 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/blog-place
 			alt: title,
 		},
 	}}
-	twitter={{
-		card: "summary_large_image",
-		site: canonicalURL.toString(),
-		title: title,
-		description: description,
-		image: resolvedImageWithDomain,
-		imageAlt: title,
-		creator: TWITTER_CREATOR,
-	}}
 	extend={{
 		// extending the default link tags
 		link: [
@@ -78,8 +69,8 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/blog-place
 				name: "twitter:image",
 				content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
 			},
-			{ name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
-			{ name: "twitter:description", content: "Agent" },
+			{ name: "twitter:title", content: "rawr51919's Portfolio" },
+			{ name: "twitter:description", content: "rawr51919's portfolio for their creations and projects." },
 		],
 	}}
 />
