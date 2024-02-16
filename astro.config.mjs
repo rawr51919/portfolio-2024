@@ -46,5 +46,7 @@ export default defineConfig({
     exclude: ["pages/api/**/*", "pages/rss.xml.ts", "pages/[locale]/rss.xml.ts"]
   }), vitePwa(), compress(), lighthouse(), critters()],
   output: "server",
-  adapter: vercel(),
+  adapter: vercel({
+	imageService: true,
+  }),
 });
