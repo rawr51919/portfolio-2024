@@ -6,10 +6,11 @@ import alpinejs from "@astrojs/alpinejs";
 import robotsTxt from 'astro-robots-txt';
 import { i18n, filterSitemapByDefaultLocale } from "astro-i18n-aut/integration";
 import { DEFAULT_LOCALE, LOCALES, SITE_URL } from "./src/consts";
-import node from "@astrojs/node";
+import vercel from '@astrojs/vercel/serverless';
 import vitePwa from "@vite-pwa/astro";
 import compress from "astro-compress";
 import lighthouse from "astro-lighthouse";
+import critters from "astro-critters";
 const defaultLocale = DEFAULT_LOCALE;
 const locales = LOCALES;
 // https://astro.build/config
@@ -17,7 +18,11 @@ export default defineConfig({
   site: SITE_URL,
   trailingSlash: "always",
   build: {
-    format: "directory"
+    format: "directory",
+	minify: true,
+    esbuild: {
+      target: 'es5' // Transpile to ES5 for broader browser support
+    }
   },
   vite: {
     logLevel: "error",
@@ -39,9 +44,9 @@ export default defineConfig({
     locales,
     defaultLocale,
     exclude: ["pages/api/**/*", "pages/rss.xml.ts", "pages/[locale]/rss.xml.ts"]
-  }), vitePwa(), compress(), lighthouse()],
+  }), vitePwa(), compress(), lighthouse(), critters()],
   output: "server",
-  adapter: node({
-    mode: "standalone"
-  })
+  adapter: vercel({
+	imageService: true,
+  }),
 });

@@ -6,6 +6,7 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@src/components/Container.astro";
 import photoAlbumImage from "@assets/images/photo-album.webp";
 import portfolioWebsiteImage from "@assets/images/portfolio-website.webp";
+import photoAlbumLighthouseReportImage from "@assets/images/photo-album-lighthouse-report.webp";
 const t = translations(Astro.url);
 ---
 <Layout>
@@ -19,7 +20,7 @@ const t = translations(Astro.url);
 					<br><br>This project uses Astro, Tailwind CSS, and Alpine.js.
 					<br><br>It's good to see you here!
 				</p>
-				<Image loading="eager" width="480" height="270" alt="Portfolio Website" src={portfolioWebsiteImage} />
+				<Image loading="eager" width="570" height="648" alt="Portfolio Website" src={portfolioWebsiteImage} />
 			</div>
 			<div class="flex flex-row pt-2">
 				<a href="https://github.com/rawr51919/portfolio-2024" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">
@@ -46,7 +47,13 @@ const t = translations(Astro.url);
 					This photo album was a project for a programming course I am currently in.
 					<br><br>This project uses React, Next.js, Tailwind CSS, and uses a NoSQL database powered by MongoDB at the backend.
 				</p>
-				<Image loading="eager" width="480" height="270" alt="Album Project" src={photoAlbumImage} />
+				<Image loading="eager" width="570" height="648" alt="Album Project" src={photoAlbumImage} />
+			</div>
+			<div class="flex flex-row overflow-scroll pt-10">
+				<p class="mr-5">
+					This project gets full marks on Google Lighthouse!
+				</p>
+				<Image loading="eager" width="570" height="648" alt="Album Project" src={photoAlbumLighthouseReportImage} />
 			</div>
 			<div class="flex flex-row pt-2">
 				<a href="https://github.com/rawr51919/prog3017-project-iii-2023" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">
