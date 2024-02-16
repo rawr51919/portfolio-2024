@@ -3,9 +3,13 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import alpinejs from "@astrojs/alpinejs";
+import robotsTxt from 'astro-robots-txt';
 import { i18n, filterSitemapByDefaultLocale } from "astro-i18n-aut/integration";
 import { DEFAULT_LOCALE, LOCALES, SITE_URL } from "./src/consts";
 import node from "@astrojs/node";
+import vitePwa from "@vite-pwa/astro";
+import compress from "astro-compress";
+import lighthouse from "astro-lighthouse";
 const defaultLocale = DEFAULT_LOCALE;
 const locales = LOCALES;
 // https://astro.build/config
@@ -21,7 +25,7 @@ export default defineConfig({
       __DATE__: `'${new Date()}'`
     }
   },
-  integrations: [mdx(), sitemap({
+  integrations: [mdx(), robotsTxt(), sitemap({
     i18n: {
       locales,
       defaultLocale
@@ -35,7 +39,7 @@ export default defineConfig({
     locales,
     defaultLocale,
     exclude: ["pages/api/**/*", "pages/rss.xml.ts", "pages/[locale]/rss.xml.ts"]
-  })],
+  }), vitePwa(), compress(), lighthouse()],
   output: "server",
   adapter: node({
     mode: "standalone"

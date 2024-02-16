@@ -19,10 +19,15 @@ interface Props {
 const locale = getLocale(Astro.url);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const resolvedImageWithDomain = new URL("/meta/opengraph.png", Astro.site).toString();
-const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/blog-placeholder-1.jpg" } = Astro.props;
+const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "./../../public/portfolio-website.png" } = Astro.props;
 ---
 <!-- Global Metadata -->
 <meta charset="utf-8" />
+<meta name="theme-color" content="#fff">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <!-- SEO data, this webpage utilizes this with Google search results -->
@@ -67,7 +72,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/blog-place
 			},
 			{
 				name: "twitter:image",
-				content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+				content: image,
 			},
 			{ name: "twitter:title", content: "rawr51919's Portfolio" },
 			{ name: "twitter:description", content: "rawr51919's portfolio for their creations and projects." },
