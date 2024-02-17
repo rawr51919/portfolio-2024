@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/en/:splat",
+      "destination": "/:splat",
+      "permanent": true
+    }
+  ]
+}
