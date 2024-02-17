@@ -32,9 +32,6 @@ export default defineConfig({
       __DATE__: `'${new Date()}'`
     }
   },
-	redirects: {
-		'/en/*': '/:splat', // Redirect from '/en/*' to '/*'
-	},
   integrations: [mdx(), robotsTxt(), sitemap({
     i18n: {
       locales,
@@ -52,7 +49,7 @@ export default defineConfig({
   }), vitePwa(), compress(), lighthouse(), critters(), icon()],
   output: "server",
   adapter: vercel({
-	imageService: true,
+  imageService: true,
   }),
 //   adapter: node({
 //     mode: "standalone",
