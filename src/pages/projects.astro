@@ -16,9 +16,7 @@ const t = translations(Astro.url);
 			<h2 class="mb-10 text-center text-2xl">This Website</h2>
 			<div class="flex flex-row overflow-scroll">
 				<p class="mr-5">
-					This very portfolio website is a demonstration of how quickly I can learn and put together websites in new technologies. It also is a good test of how fast and optimized I can make my webpages.
-					<br>This project uses Astro, Tailwind CSS, and Alpine.js. It also has full marks and the full PWA badge on Google Lighthouse as of 11.5.0.
-					<br>It's good to see you here!
+					{t.project1_description}
 				</p>
 				<Image loading="eager" width="480" height="270" alt="Portfolio Website" src={portfolioWebsiteImage} />
 			</div>
@@ -40,7 +38,7 @@ const t = translations(Astro.url);
 				</a>
 			</div>
 			<p class="mt-5 mb-2">
-				To see the starter template this website is based off of:
+				{t.project1_template}
 			</p>
 			<div class="flex flex-row">
 				<a href="https://github.com/zankhq/astro-starter" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">
@@ -62,14 +60,12 @@ const t = translations(Astro.url);
 			<h2 class="mb-10 text-center text-2xl">Photo Album</h2>
 			<div class="flex flex-row overflow-scroll">
 				<p class="mr-5">
-					This photo album was a project for a programming course I am currently in.
-					<br>This project uses React, Next.js, Tailwind CSS, and uses a NoSQL database powered by MongoDB with a variant using a MySQL database and PHP also being available.
-					<br>It also has full marks on Google Lighthouse and the full PWA badge as of Lighthouse 11.5.0.
+					{t.project2_description}
 				</p>
 				<Image width="480" height="270" alt="Album Project" src={photoAlbumImage} />
 			</div>
 			<p class="pt-3">
-				To see the MongoDB/NextJS version of this project:
+				{t.project2_mongodb_nextjs}
 			</p>
 			<div class="flex flex-row pt-2">
 				<a href="https://github.com/rawr51919/prog3017-project-ii-2023" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">
@@ -89,7 +85,7 @@ const t = translations(Astro.url);
 				</a>
 			</div>
 			<p class="pt-5">
-				To see the MySQL/PHP version of this project:
+				{t.project2_mysql_php}
 			</p>
 			<div class="flex flex-row pt-2">
 				<a href="https://github.com/rawr51919/prog3017-project-i-2023" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">

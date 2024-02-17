@@ -18,8 +18,8 @@ interface Props {
 }
 const locale = getLocale(Astro.url);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const resolvedImageWithDomain = new URL("/meta/opengraph.png", Astro.site).toString();
-const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "./../../public/portfolio-website.png" } = Astro.props;
+const resolvedImageWithDomain = new URL("./../assets/images/portfolio-website.webp", Astro.site).toString();
+const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "./../assets/images/portfolio-website.webp" } = Astro.props;
 ---
 <!-- Global Metadata -->
 <meta charset="utf-8" />
