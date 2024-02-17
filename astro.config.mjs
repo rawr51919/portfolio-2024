@@ -33,7 +33,7 @@ export default defineConfig({
     }
   },
 	redirects: {
-		'/en/*': '/*', // Redirect from '/en/*' to '/*'
+		'/en/*': '/:splat', // Redirect from '/en/*' to '/*'
 	},
   integrations: [mdx(), robotsTxt(), sitemap({
     i18n: {
