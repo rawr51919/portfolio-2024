@@ -32,6 +32,9 @@ export default defineConfig({
       __DATE__: `'${new Date()}'`
     }
   },
+	redirects: {
+		'/en/': '/', // Redirect from '/en/' to '/'
+	},
   integrations: [mdx(), robotsTxt(), sitemap({
     i18n: {
       locales,
@@ -55,11 +58,4 @@ export default defineConfig({
 //     mode: "standalone",
 //     standalone: true
 //   }),
-	redirects: [
-		{
-			source: '/en/',
-			destination: '/',
-			permanent: true,
-		},
-	],
 });
