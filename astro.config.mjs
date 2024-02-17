@@ -32,6 +32,9 @@ export default defineConfig({
       __DATE__: `'${new Date()}'`
     }
   },
+  redirects: {
+    '/en/*': '/*', // Redirect from '/en/*' to '/*'
+  },
   integrations: [mdx(), robotsTxt(), sitemap({
     i18n: {
       locales,
