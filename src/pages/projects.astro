@@ -3,10 +3,10 @@
 import { Image } from "astro:assets";
 import translations from "@utils/t.ts";
 import Layout from "@layouts/Layout.astro";
+import { Icon } from 'astro-icon/components';
 import Container from "@src/components/Container.astro";
 import photoAlbumImage from "@assets/images/photo-album.webp";
 import portfolioWebsiteImage from "@assets/images/portfolio-website.webp";
-import photoAlbumLighthouseReportImage from "@assets/images/photo-album-lighthouse-report.webp";
 const t = translations(Astro.url);
 ---
 <Layout>
@@ -16,9 +16,10 @@ const t = translations(Astro.url);
 			<h2 class="mb-10 text-center text-2xl">This Website</h2>
 			<div class="flex flex-row overflow-scroll">
 				<p class="mr-5">
-					This very portfolio website is a demonstration of how quickly I can learn and put together websites in new technologies.
-					<br><br>This project uses Astro, Tailwind CSS, and Alpine.js.
-					<br><br>It's good to see you here!
+					This very portfolio website is a demonstration of how quickly I can learn and put together websites in new technologies. It also is a good test of how fast and optimized I can make my webpages.
+					<br>This project uses Astro, Tailwind CSS, and Alpine.js.
+					<br>It also has full marks on Google Lighthouse and the full PWA badge as of Lighthouse 11.5.0.
+					<br>It's good to see you here!
 				</p>
 				<Image loading="eager" width="480" height="270" alt="Portfolio Website" src={portfolioWebsiteImage} />
 			</div>
@@ -39,25 +40,41 @@ const t = translations(Astro.url);
 					</svg>
 				</a>
 			</div>
+			<p class="mt-5 mb-2">
+				To see the starter template this website is based off of:
+			</p>
+			<div class="flex flex-row">
+				<a href="https://github.com/zankhq/astro-starter" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">
+					<span class="sr-only">See the template this project is based on on GitHub</span>
+					<svg viewBox="0 0 16 16" width="48" height="48" astro-icon="social/github">
+						<path
+							fill="currentColor"
+							d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+						</path>
+					</svg>
+				</a>
+				<a href="https://astrostarter.zank.studio" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">
+					<span class="sr-only">See the live copy of the template</span>
+					<Icon class="text-5xl" name="logo" />
+				</a>
+			</div>
 		</div>
 		<div class="mt-10 g-sample">
 			<h2 class="mb-10 text-center text-2xl">Photo Album</h2>
 			<div class="flex flex-row overflow-scroll">
 				<p class="mr-5">
 					This photo album was a project for a programming course I am currently in.
-					<br><br>This project uses React, Next.js, Tailwind CSS, and uses a NoSQL database powered by MongoDB at the backend.
+					<br>This project uses React, Next.js, Tailwind CSS, and a NoSQL database powered by MongoDB at the backend with a variant with a MySQL database and PHP as the backend also being available.
+					<br>It also has full marks on Google Lighthouse and the full PWA badge as of Lighthouse 11.5.0.
 				</p>
-				<Image loading="eager" width="480" height="270" alt="Album Project" src={photoAlbumImage} />
+				<Image width="480" height="270" alt="Album Project" src={photoAlbumImage} />
 			</div>
-			<div class="flex flex-row overflow-scroll pt-10">
-				<p class="mr-5">
-					This project gets full marks on Google Lighthouse!
-				</p>
-				<Image loading="eager" width="480" height="270" alt="Album Project" src={photoAlbumLighthouseReportImage} />
-			</div>
+			<p class="pt-3">
+				To see the MongoDB/NextJS version of this project:
+			</p>
 			<div class="flex flex-row pt-2">
-				<a href="https://github.com/rawr51919/prog3017-project-iii-2023" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">
-					<span class="sr-only">See this project on GitHub</span>
+				<a href="https://github.com/rawr51919/prog3017-project-ii-2023" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">
+					<span class="sr-only">See the NextJS/MongoDB version of this project on GitHub</span>
 					<svg viewBox="0 0 16 16" width="48" height="48" astro-icon="social/github">
 						<path
 							fill="currentColor"
@@ -69,6 +86,20 @@ const t = translations(Astro.url);
 					<span class="sr-only">View the live page on Vercel</span>
 					<svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="48" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="48" style="color:var(--geist-foreground);width:48px;height:48px">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2L2 19.7778H22L12 2Z" fill="currentColor"/>
+					</svg>
+				</a>
+			</div>
+			<p class="pt-5">
+				To see the MySQL/PHP version of this project:
+			</p>
+			<div class="flex flex-row pt-2">
+				<a href="https://github.com/rawr51919/prog3017-project-i-2023" target="_blank" class="text-gray-500 hover:text-gray-700 transition-all pr-3">
+					<span class="sr-only">See the MySQL/PHP version of this project on GitHub</span>
+					<svg viewBox="0 0 16 16" width="48" height="48" astro-icon="social/github">
+						<path
+							fill="currentColor"
+							d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+						</path>
 					</svg>
 				</a>
 			</div>
