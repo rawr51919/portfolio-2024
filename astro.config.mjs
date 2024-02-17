@@ -32,6 +32,9 @@ export default defineConfig({
       __DATE__: `'${new Date()}'`
     }
   },
+  redirects: {
+	'/en/*/': '/:splat'
+  },
   integrations: [mdx(), robotsTxt(), sitemap({
     i18n: {
       locales,
