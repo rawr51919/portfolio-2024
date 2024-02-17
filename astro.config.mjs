@@ -55,4 +55,11 @@ export default defineConfig({
 //     mode: "standalone",
 //     standalone: true
 //   }),
+	redirects: [
+		{
+			source: '/en/',
+			destination: '/',
+			permanent: true,
+		},
+	],
 });
