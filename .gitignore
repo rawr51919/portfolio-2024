@@ -26,5 +26,8 @@ astro_tmp_pages_*
 # Local Netlify folder
 .netlify
 
+# Local Vercel folder
+.vercel
+
 # Service Worker
 dev-dist/
