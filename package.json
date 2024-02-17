@@ -45,7 +45,7 @@
 		"mdx": "^0.2.3",
 		"rehype": "^13.0.1",
 		"tailwindcss": "^3.4.1",
-		"vite-plugin-pwa": "^0.18.2",
+		"vite-plugin-pwa": "^0.19.0",
 		"workbox-window": "^7.0.0"
 	},
 	"devDependencies": {
