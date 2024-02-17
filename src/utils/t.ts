@@ -49,10 +49,10 @@ export function localizePath(link: string | URL, astroUrl: string | URL): string
 		localizedLink = String(link);
 	}
 	// localizedLink add last slash
-	if (!localizedLink.endsWith("/") && !localizedLink.endsWith("/" + locale + "/") || localizedLink.endsWith("/" + locale)) {
+	if (!localizedLink.endsWith("/") && !localizedLink.endsWith("/" + locale + "/")) {
 		localizedLink += "/";
-	} else if (localizedLink.endsWith("/" + locale + "/")) {
-		localizedLink = localizedLink.replace("/" + locale + "/", "/");
+	} else if (localizedLink.endsWith("/" + "en" + "/")) {
+		localizedLink = localizedLink.replace("/" + "en" + "/", "/");
 	}
 	return localizedLink;
 }
