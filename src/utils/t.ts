@@ -53,8 +53,6 @@ export function localizePath(link: string | URL, astroUrl: string | URL): string
 		localizedLink += "/";
 	} else if (localizedLink.endsWith("/" + locale + "/")) {
 		localizedLink = localizedLink.replace("/" + locale + "/", "/");
-	} else if (localizedLink.endsWith("/" + "en" + "/")) {
-		localizedLink = localizedLink.replace("/" + "en" + "/", "/");
 	}
 	return localizedLink;
 }
