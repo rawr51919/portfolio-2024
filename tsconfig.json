@@ -1,6 +1,7 @@
 {
 	"extends": "astro/tsconfigs/strict",
 	"compilerOptions": {
+		"allowImportingTsExtensions": true,
 		"strictNullChecks": true,
 		"baseUrl": "src",
 		"paths": {
