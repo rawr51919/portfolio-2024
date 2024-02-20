@@ -6,8 +6,10 @@ import Container from "@src/components/Container.astro";
 const t = translations(Astro.url);
 ---
 <Layout title="Welcome to my Portfolio">
-	<Container class="pt-16 text-center">
+	<Container class="pt-16">
 		<span set:html={t.home_description} />
-		<br><br><a class="bg-slate-400 border-slate-800 hover:bg-slate-800 transition-all px-2 py-2 rounded-md" href="./resumé-2024.pdf">{t.home_resume}</a>
+		<div class="text-center mt-10">
+			<a class="bg-slate-400 border-slate-800 hover:bg-slate-800 transition-all px-2 py-2 rounded-md" href="./resumé-2024.pdf">{t.home_resume}</a>
+		</div>
 	</Container>
 </Layout>
