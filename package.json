@@ -53,7 +53,7 @@
 		"astro-icon": "^1.1.0",
 		"astro-seo": "^0.8.3",
 		"prettier": "^3.2.5",
-		"prettier-plugin-astro": "^0.13.0",
+		"prettier-plugin-astro": "^0.14.0",
 		"prettier-plugin-tailwindcss": "^0.5.13"
 	},
 	"prettier": {
