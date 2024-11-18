@@ -10,7 +10,7 @@ import { DEFAULT_LOCALE, LOCALES, SITE_URL } from "./src/consts";
 import vercel from '@astrojs/vercel/serverless';
 import vitePwa from "@vite-pwa/astro";
 import compress from "astro-compress";
-import lighthouse from "astro-lighthouse";
+//import lighthouse from "astro-lighthouse"; .
 import critters from "astro-critters";
 import icon from "astro-icon";
 const defaultLocale = DEFAULT_LOCALE;
@@ -51,11 +51,13 @@ export default defineConfig({
     locales,
     defaultLocale,
     exclude: ["pages/api/**/*", "pages/rss.xml.ts", "pages/[locale]/rss.xml.ts"]
-  }), vitePwa(), compress(), lighthouse(), critters(), icon()],
+  }), vitePwa(), compress(), critters(), icon()],
   output: "server",
+  // vercel adapter for running the project in vercel
   adapter: vercel({
-  imageService: true,
+  	imageService: true,
   }),
+  // node adapter for running the project in a dedicated NodeJS server
 //   adapter: node({
 //     mode: "standalone",
 //     standalone: true
