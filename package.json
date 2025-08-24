@@ -33,7 +33,7 @@
 		"@fontsource-variable/inter": "^5.1.0",
 		"@types/alpinejs": "^3.13.10",
 		"@types/mdx": "^2.0.13",
-		"@vite-pwa/astro": "^0.5.0",
+		"@vite-pwa/astro": "^1.0.0",
 		"alpinejs": "^3.14.3",
 		"astro": "^4.16.13",
 		"astro-compress": "^2.3.5",
