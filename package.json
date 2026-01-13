@@ -50,7 +50,7 @@
 	"devDependencies": {
 		"@vite-pwa/assets-generator": "^0.2.6",
 		"astro-icon": "^1.1.2",
-		"astro-seo": "^0.8.4",
+		"astro-seo": "^1.0.0",
 		"prettier": "^3.3.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-tailwindcss": "^0.7.0"
