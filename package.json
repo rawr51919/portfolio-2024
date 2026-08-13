@@ -39,7 +39,7 @@
 		"astro-compress": "^2.3.5",
 		"astro-critters": "^2.2.0",
 		"astro-htmx": "^1.0.6",
-		"astro-i18n-aut": "^0.7.0",
+		"astro-i18n-aut": "^0.8.0",
 		"astro-robots-txt": "^1.0.0",
 		"mdx": "^0.2.3",
 		"rehype": "^13.0.2",
